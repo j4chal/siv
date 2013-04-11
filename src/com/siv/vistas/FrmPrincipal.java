@@ -224,10 +224,20 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         jMenuItem4.setMnemonic('A');
         jMenuItem4.setText("Actualizar Ingreso Producto");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem4);
 
         jMenuItem5.setMnemonic('n');
         jMenuItem5.setText("Anular Ingreso de Producto");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem5);
 
         jMenuBar1.add(jMenu1);
@@ -601,6 +611,34 @@ public class FrmPrincipal extends javax.swing.JFrame {
         }
         rp.runClienteParametro();
     }//GEN-LAST:event_jMenuItem25ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        // TODO add your handling code here:
+        if(!this.checkState(FrmAnularIngreso.class)){
+            FrmAnularIngreso frm = new FrmAnularIngreso();
+            this.jDesktopPane1.add(frm);
+            frm.setMaximizable(false);
+            frm.setResizable(false);frm.moveToFront();
+            try{
+                frm.setSelected(true);
+            }catch(Exception e){}
+            frm.show();
+        }
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        if(!this.checkState(FrmActIngresoProducto.class)){
+            FrmActIngresoProducto frm = new FrmActIngresoProducto();
+            this.jDesktopPane1.add(frm);
+            frm.setMaximizable(false);
+            frm.setResizable(false);frm.moveToFront();
+            try{
+                frm.setSelected(true);
+            }catch(Exception e){}
+            frm.show();
+        }
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments
