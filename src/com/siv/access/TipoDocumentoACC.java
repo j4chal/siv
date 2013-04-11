@@ -34,4 +34,18 @@ public class TipoDocumentoACC extends DaoSupport implements TipoDocumentoINT{
     });
     }
     
+    @Override
+    public TipoDocumento getTipoDocumento(int id) {
+       String sql = "select id,descripcion from tipodocumentos where id=?";
+       return jdbcTemplate.queryForObject(sql, new Object[]{id}, new RowMapper<TipoDocumento>(){
+           @Override
+           public TipoDocumento mapRow(ResultSet rs, int rowNum) throws SQLException {
+                TipoDocumento tpd = new TipoDocumento();
+                tpd.setId(rs.getInt(1));
+                tpd.setDescripcion(rs.getString(2));
+                return tpd;
+            } 
+        });
+    }
+    
 }
