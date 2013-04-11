@@ -20,7 +20,6 @@ public class Movimiento {
     private Double precio_gral;
     private Double utilidad;
     private String marca;
-    private Categoria id_categoria;
 
     public Integer getId() {
         return id;
@@ -92,14 +91,6 @@ public class Movimiento {
 
     public void setMarca(String marca) {
         this.marca = marca;
-    }
-
-    public Categoria getId_categoria() {
-        return id_categoria;
-    }
-
-    public void setId_categoria(Categoria id_categoria) {
-        this.id_categoria = id_categoria;
     }
 
     public Double getPrecio_gral() {
