@@ -31,5 +31,9 @@ public class TipoDocumento {
 
     public TipoDocumento() {
     }
-    
+
+    @Override
+    public String toString(){
+        return this.getDescripcion();
+    }
 }
