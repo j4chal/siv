@@ -13,4 +13,9 @@ import java.util.List;
  */
 public interface TipoDocumentoINT {
     public List<TipoDocumento> getAll();
+    public TipoDocumento getTipoDocumento(int id);
 }
+
+
+
+
