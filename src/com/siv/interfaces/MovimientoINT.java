@@ -5,6 +5,7 @@
 package com.siv.interfaces;
 
 import com.siv.beans.Movimiento;
+import java.util.List;
 
 /**
  *
@@ -13,5 +14,7 @@ import com.siv.beans.Movimiento;
 public interface MovimientoINT {
     public int insert (Movimiento mov);
     public int update (Movimiento mov);
-    public int delete(int id);
+    public int delete(Movimiento mov);
+    public List<Movimiento> getAll();
+    public Movimiento getMovimiento(int id);
 }
