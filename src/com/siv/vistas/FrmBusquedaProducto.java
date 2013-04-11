@@ -255,6 +255,7 @@ public class FrmBusquedaProducto extends javax.swing.JInternalFrame {
                          frm.jtPrecioCompraAc.setText(formateador.format(c.getPrecio_base()).toString());
                          frm.jTUtilidadActual.setText(formateador.format(c.getGanancia()).toString());
                          frm.jtPrecioVentaAC.setText(formateador.format(c.getPrecio_gral()).toString());
+                         frm.jTStock.setText(formateador.format(c.getStock()).toString());
                          this.dispose();
                     }
                 }
